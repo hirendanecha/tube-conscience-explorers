@@ -17,7 +17,7 @@ const api_url = environment.apiUrl;
 // The Express app is exported so that it can be used by serverless Functions.
 export function app(): express.Express {
   const server = express();
-  const distFolder = join(process.cwd(), 'tube-dist/freedom-tube/browser');
+  const distFolder = join(process.cwd(), 'tube-dist/tube-conscience-explorers/browser');
   const indexHtml = existsSync(join(distFolder, 'index.original.html'))
     ? 'index.original.html'
     : 'index';
@@ -26,7 +26,7 @@ export function app(): express.Express {
   const path = require('path');
   const template = fs
     .readFileSync(
-      path.join(join(process.cwd(), 'tube-dist/freedom-tube/browser'), 'index.html')
+      path.join(join(process.cwd(), 'tube-dist/tube-conscience-explorers/browser'), 'index.html')
     )
     .toString();
   // Shim for the global window and document objects.
@@ -78,14 +78,14 @@ export function app(): express.Express {
         }
         const params = req.params[0];
         var seo: any = {
-          title: 'Freedom.Tube',
+          title: 'Tube Conscience Explorers',
           description:
             'The Umbrella platform for All freedom based projects worldwide',
           image:
             'https://tube.freedom.buzz/assets/banner/freedom-buzz-high-res.jpeg',
           site: 'https://tube.freedom.buzz/',
           url: 'https://tube.freedom.buzz' + params,
-          keywords: 'Freedom.Tube',
+          keywords: 'MindfulTube',
         };
         if (
           params.indexOf('channel/') > -1
@@ -126,7 +126,7 @@ export function app(): express.Express {
           const pdhtml = document.createElement('div');
           pdhtml.innerHTML = post?.postdescription || post?.metadescription;
           const talent = {
-            name: post?.title || post?.albumname || 'Freedom.Buzz Post',
+            name: post?.title || post?.albumname || 'MindfulTube Post',
             description: pdhtml?.textContent || 'Post content',
             image: post?.thumbfilename || post?.metaimage || post?.imageUrl,
           };

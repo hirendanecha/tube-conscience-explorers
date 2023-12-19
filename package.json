@@ -1,5 +1,5 @@
 {
-  "name": "freedom-tube",
+  "name": "tube-conscience-explorers",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -8,10 +8,10 @@
     "build:dev": "ng build --configuration development",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "dev:ssr": "ng run freedom-tube:dev-serve-ssr",
-    "serve:ssr": "node tube-dist/freedom-tube/server/main.js",
-    "build:ssr": "ng build && ng run freedom-tube:server",
-    "prerender": "ng run freedom-tube:prerender"
+    "dev:ssr": "ng run tube-conscience-explorers:dev-serve-ssr",
+    "serve:ssr": "node tube-dist/tube-conscience-explorers/server/main.js",
+    "build:ssr": "ng build && ng run tube-conscience-explorers:server",
+    "prerender": "ng run tube-conscience-explorers:prerender"
   },
   "private": true,
   "dependencies": {
