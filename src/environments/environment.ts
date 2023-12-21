@@ -1,12 +1,12 @@
-const loginUrl = 'https://freedom.buzz/login';
-const logoutUrl = 'https://freedom.buzz/logout';
-const frontendUrl = 'https://tube.freedom.buzz/';
-const backendUrl = 'https://freedom-api.opash.in/';
+const loginUrl = 'https://conscienceexplorers.com/login';
+const logoutUrl = 'https://conscienceexplorers.com/logout';
+const frontendUrl = 'https://tube.conscienceexplorers.com/';
+const backendUrl = 'https://api.conscienceexplorers.com/';
 
 // const frontendUrl = 'http://localhost:4200/';
 // const backendUrl = 'http://localhost:8080/';
 // const loginUrl = 'http://localhost:4200/login';
-const wasabiUrl = 'https://freedom-social.s3.us-east-1.wasabisys.com/'
+const wasabiUrl = 'https://conscience-explorers.s3.wasabisys.com/'
 
 
 export const environment = {
@@ -15,7 +15,7 @@ export const environment = {
   backendUrl: backendUrl,
   loginUrl: loginUrl,
   apiUrl: `${backendUrl}api/v1/`,
-  domain: '.freedom.buzz',
+  domain: '.conscienceexplorers.com',
   wasabiUrl: wasabiUrl,
   socketUrl: `${backendUrl}`,
   conferenceUrl: 'https://facetime.tube/',
