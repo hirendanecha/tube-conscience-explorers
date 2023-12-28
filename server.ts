@@ -80,11 +80,11 @@ export function app(): express.Express {
         var seo: any = {
           title: 'Tube Conscience Explorers',
           description:
-            'The Umbrella platform for All freedom based projects worldwide',
+            'Platform for the consciously awakening people worldwide to create worldwide unity conscience',
           image:
-            'https://tube.freedom.buzz/assets/banner/freedom-buzz-high-res.jpeg',
-          site: 'https://tube.freedom.buzz/',
-          url: 'https://tube.freedom.buzz' + params,
+            'https://conscienceexplorers.com/assets/banner/MindfulTube-Logo.png',
+          site: 'https://tube.conscienceexplorers.com/',
+          url: 'https://tube.conscienceexplorers.com' + params,
           keywords: 'MindfulTube',
         };
         if (
