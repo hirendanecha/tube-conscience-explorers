@@ -85,7 +85,7 @@ export function app(): express.Express {
             'https://conscienceexplorers.com/assets/banner/MindfulTube-Logo.png',
           site: 'https://tube.conscienceexplorers.com/',
           url: 'https://tube.conscienceexplorers.com' + params,
-          keywords: 'MindfulTube',
+          keywords: 'ConscienceExplorersTube',
         };
         if (
           params.indexOf('channel/') > -1
@@ -126,7 +126,7 @@ export function app(): express.Express {
           const pdhtml = document.createElement('div');
           pdhtml.innerHTML = post?.postdescription || post?.metadescription;
           const talent = {
-            name: post?.title || post?.albumname || 'MindfulTube Post',
+            name: post?.title || post?.albumname || 'ConscienceExplorersTube Post',
             description: pdhtml?.textContent || 'Post content',
             image: post?.thumbfilename || post?.metaimage || post?.imageUrl,
           };
