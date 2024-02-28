@@ -68,7 +68,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
       }
     });
     const data = {
-      title: `MindfulTube`,
+      title: `ConscienceExplorersTube`,
       description: '',
     };
     this.seoService.updateSeoMetaData(data);
@@ -117,7 +117,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
           // localStorage.setItem('channelId', this.channelData.id);
           // console.log(this.channelData);
           const data = {
-            title: `MindfulTube ${this.channelData?.firstname}`,
+            title: `ConscienceExplorersTube ${this.channelData?.firstname}`,
             url: `${location.href}`,
             description: '',
           };
@@ -138,7 +138,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
         if (res.data.length) {
           this.channelData = res.data[0];
           const data = {
-            title: `MindfulTube ${this.channelData.firstname}`,
+            title: `ConscienceExplorersTube ${this.channelData.firstname}`,
             url: `${location.href}`,
             description: '',
           };

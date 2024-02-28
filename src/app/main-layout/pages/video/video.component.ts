@@ -146,7 +146,7 @@ export class VideoComponent implements OnInit, OnChanges {
         this.videoDetails = res[0];
        
         const data = {
-          title: `MindfulTube ${this.videoDetails.albumname}`,
+          title: `ConscienceExplorersTube ${this.videoDetails.albumname}`,
           description: this.videoDetails.postdescription,
         };
         this.seoService.updateSeoMetaData(data);
