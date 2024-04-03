@@ -82,7 +82,7 @@ export function app(): express.Express {
           description:
             'Platform for the consciously awakening people worldwide to create worldwide unity conscience',
           image:
-            'https://conscienceexplorers.com/assets/banner/MindfulTube-Logo.png',
+            'https://tube.conscienceexplorers.com/assets/banner/MindfulTube-Logo.png',
           site: 'https://tube.conscienceexplorers.com/',
           url: 'https://tube.conscienceexplorers.com' + params,
           keywords: 'ConscienceExplorersTube',
