@@ -24,7 +24,7 @@
               <!-- <a class="cursor c-font" (click)="viewUserPost(notification.postId)">{{
                 notification?.Username
               }}</a> -->
-              <a class="cursor c-font" [href]="'https://conscienceexplorers.com/post/' + notification.postId" target="_blank">{{
+              <a class="cursor c-font"  [href]="notification.postId ? 'https://freedom.buzz/post/' + notification.postId : 'https://freedom.buzz/profile-chats'" target="_blank">{{
                 notification?.Username
               }}</a>
               <span class="ms-1">{{ notification?.notificationDesc }} </span>
@@ -74,6 +74,14 @@
         </div>
       </div>
     </ng-container>
+    <div
+    class="d-flex align-items-center justify-content-center m-3 cursor"
+    (click)="loadMoreNotification()"
+    *ngIf="hasMoreData"
+  >
+    <fa-icon [icon]="['fas', 'refresh']" class="font-24-px me-2"></fa-icon>
+    <span>Loadmore</span>
+  </div>
   </ng-container>
 
   <ng-container *ngIf="notificationList.length === 0">
