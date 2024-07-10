@@ -37,7 +37,7 @@ export class VideoCardComponent implements OnInit, AfterViewInit {
     public commonService: CommonService,
     private ngZone: NgZone,
   ) {
-    this.profileid = JSON.parse(this.authService.getUserData() as any)?.Id;
+    this.profileid = JSON.parse(this.authService.getUserData() as any)?.profileId;
     this.includedChannels = localStorage.getItem('get-channels');
     // console.log(this.profileid);
   }
