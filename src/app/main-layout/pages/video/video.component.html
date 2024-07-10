@@ -80,7 +80,7 @@
                   </p> -->
                 </div>
                 <div class="d-flex gap-1 gap-sm-3" *ngIf="sharedService.getCredentials()">
-                  <div
+                  <!-- <div
                     class="d-flex align-items-center gap-1 cursor"
                     (click)="
                       videoDetails.react === 'L'
@@ -95,13 +95,14 @@
                     <span class="me-1 font-20-px">{{
                       videoDetails.likescount || 0
                     }}</span>
+                  </div> -->
+                  <div
+                    class="d-flex align-items-center cursor"
+                    (click)="shareOnNF(videoDetails)"
+                  >
+                    <span class="me-1 font-20-px">Share</span>
+                    <fa-icon [icon]="['fas', 'share-alt']" [fixedWidth]="true" />
                   </div>
-                <div
-                  class="d-flex align-items-center cursor"
-                  (click)="shareOnNF(videoDetails)"
-                >
-                  <span class="me-1 font-20-px">Share</span>
-                  <fa-icon [icon]="['fas', 'share-alt']" [fixedWidth]="true" />
                 </div>
               </div>
             </div>
@@ -137,14 +138,14 @@
                 {{ videoDetails?.created | date : "MMM dd,yyyy" }}</small
               >
             </div>
-            <ng-container *ngIf="videoDetails?.profileid !== profileId && sharedService.getCredentials()">
-              <div class="d-flex align-items-center form-inline my-2 my-lg-0">
-                <button class="btn btn-sm" [ngClass]="!videoDetails?.isSubscribed ? 'btn-success' : 'btn-danger'" (click)="channelSubscribe(videoDetails?.isSubscribed)">
-                  {{ !videoDetails?.isSubscribed ? 'Subscribe' : 'Unsubscribe'}}
-                </button>
-              </div>
-            </ng-container>
-          </div>
+              <!-- <ng-container *ngIf="videoDetails?.profileid !== profileId && sharedService.getCredentials()">
+                <div class="d-flex align-items-center form-inline my-2 my-lg-0">
+                  <button class="btn btn-sm" [ngClass]="!videoDetails?.isSubscribed ? 'btn-success' : 'btn-danger'" (click)="channelSubscribe(videoDetails?.isSubscribed)">
+                    {{ !videoDetails?.isSubscribed ? 'Subscribe' : 'Unsubscribe'}}
+                  </button>
+                </div>
+              </ng-container> -->
+            </div>
             <div class="single-video-info-content box mb-3">
               <!-- <h6>Cast:</h6>
               <p>Nathan Drake , Victor Sullivan , Sam Drake , Elena Fisher</p>
@@ -323,7 +324,7 @@
                             class="reviews-members-footer d-flex align-items-center"
                           >
                             <button
-                              class="total-like me-2 cursor  btn btn-outline-primary"
+                              class="total-like me-2 cursor btn btn-outline-primary"
                               (click)="
                                 comment.react == 'L'
                                   ? disLikeComments(comment)
@@ -568,7 +569,7 @@
         </div>
         <ng-template #noCredentials>
           <div
-            class="right-sidebar profile-sidebar cus-scrollbar d-flex flex-columnd-none d-lg-flex shadow"
+            class="right-sidebar profile-sidebar cus-scrollbar d-flex flex-column d-none d-lg-flex shadow"
           >
             <div class="dashboard-img mb-5 mt-2">
               <img

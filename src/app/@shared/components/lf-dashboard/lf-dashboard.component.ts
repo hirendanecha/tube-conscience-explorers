@@ -205,7 +205,6 @@ export class LfDashboardComponent implements OnInit {
 
   getChannels(): void {
     this.userId = JSON.parse(this.authService.getUserData() as any)?.Id;
-    console.log('xyz',this.userId);
     const apiUrl = `${environment.apiUrl}channels/get-channels/${this.userId}`;
     this.commonService.get(apiUrl).subscribe({
       next: (res) => {
