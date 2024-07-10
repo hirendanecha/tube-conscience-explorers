@@ -31,6 +31,7 @@ export class AuthService {
     // this.admin = new BehaviorSubject<any>(adminJson);
     const userJson = localStorage.getItem('authUser') ? JSON.parse(localStorage.getItem('authUser') as any) : {};
     this.user = new BehaviorSubject<any>(userJson);
+    
     // this.token = new BehaviorSubject<any>(this.cookieService.get('token') ? this.cookieService.get('token') : '');
   }
 

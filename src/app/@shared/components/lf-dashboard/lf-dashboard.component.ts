@@ -172,6 +172,8 @@ export class LfDashboardComponent implements OnInit {
     this.commonService.get(apiUrl).subscribe({
       next: (res) => {
         this.channelList = res.data;
+        let channelIds = this.channelList.map(e => e.id);
+        localStorage.setItem('get-channels', JSON.stringify(channelIds));
         console.log(this.channelList);
       },
       error(err) {
