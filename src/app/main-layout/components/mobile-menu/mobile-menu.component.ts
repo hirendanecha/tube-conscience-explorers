@@ -24,7 +24,6 @@ export class MobileMenuComponent implements OnInit {
   }
   ngOnInit(): void {
     this.channelId = +localStorage.getItem('channelId');
-    this.isUserMediaApproved = this.hasChannelId;
   }
 
   openVideoUploadPopUp(): void {
@@ -38,9 +37,6 @@ export class MobileMenuComponent implements OnInit {
     modalRef.result.then((res) => {
       // console.log(res);
     });
-  }
-  hasChannelId(): boolean {
-    return this.channelId !== null && this.channelId !== undefined;
   }
   getmyChannel() {
     const unique_link = this.shareService.channelData.unique_link;
