@@ -171,4 +171,8 @@ export class CommonService {
   unsubscribeChannel(data): Observable<any> {
     return this.http.delete(`${environment.apiUrl}subscribe/remove/${data.ProfileId}/${data.SubscribeChannelId}`);
   }
+  getAdvertisement(): Observable<any> {
+    const url = environment.apiUrl + 'advertizement'
+    return this.http.get(`${url}/get`);
+  }
 }

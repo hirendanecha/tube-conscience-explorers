@@ -53,6 +53,7 @@ export class VideoCardComponent implements OnInit, AfterViewInit {
       window.addEventListener('resize', this.onResize.bind(this));
     });
     if (this.isInnerWidthSmall) {
+      this.getadvertizements();
     }
   }
 
@@ -136,6 +137,16 @@ export class VideoCardComponent implements OnInit, AfterViewInit {
       window.location.reload();
       if (res === 'success') {
       }
+    });
+  }
+  getadvertizements(): void {
+    this.commonService.getAdvertisement().subscribe({
+      next: (res: any) => {
+        this.advertisementDataList = res;
+      },
+      error: (err) => {
+        console.log(err);
+      },
     });
   }
  

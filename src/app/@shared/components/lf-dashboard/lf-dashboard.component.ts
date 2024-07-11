@@ -42,6 +42,7 @@ export class LfDashboardComponent implements OnInit {
   channelList: any = [];
   mediaApproved: boolean;
   userId: number;
+  advertisementDataList: any = [];
 
   constructor(
     private route: ActivatedRoute,
@@ -91,6 +92,7 @@ export class LfDashboardComponent implements OnInit {
     this.shareService.mediaApproved$.subscribe(value => {
       this.mediaApproved = value;
     });
+    this.getadvertizements();
   }
 
   getChannelDetails(value): void {
@@ -214,6 +216,16 @@ export class LfDashboardComponent implements OnInit {
         // console.log(this.channelList);
       },
       error(err) {
+        console.log(err);
+      },
+    });
+  }
+  getadvertizements(): void {
+    this.commonService.getAdvertisement().subscribe({
+      next: (res: any) => {
+        this.advertisementDataList = res;
+      },
+      error: (err) => {
         console.log(err);
       },
     });
