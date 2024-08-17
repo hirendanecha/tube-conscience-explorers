@@ -99,6 +99,10 @@ export class ShareService {
         this.updateMediaApproved(mediaApproved);
         console.log(this.userDetails)
         this.getChannelByUserId(this.userDetails?.channelId);
+        const storedChannelId = localStorage.getItem('channelId')
+        if (storedChannelId === null || storedChannelId === '') {
+          localStorage.setItem('channelId', this.userDetails?.channelId);
+        }
       }), error: error => {
         console.log(error)
       }
@@ -130,7 +134,9 @@ export class ShareService {
         if (res[0]) {
           this.channelData = res[0];
           this.userChannelName = this.channelData.firstname;
-          localStorage.setItem('channelId', res[0]?.id);
+          if (res[0]?.id) {
+            localStorage.setItem('channelId', res[0]?.id);
+          }
           // console.log(this.channelData.firstname);
         }
       },

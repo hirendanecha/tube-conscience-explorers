@@ -158,7 +158,7 @@ export class LfDashboardComponent implements OnInit {
       modalRef.componentInstance.channelList = this.channelList;
       modalRef.result.then((res) => {
         if (res === 'success') {
-          window.location.reload();
+          location.reload();
         }
       });
     };
