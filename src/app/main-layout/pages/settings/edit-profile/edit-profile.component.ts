@@ -74,7 +74,7 @@ export class EditProfileComponent implements OnInit, AfterViewInit {
       State: this.useDetails?.State,
       Username: this.useDetails?.Username,
       MobileNo: this.useDetails?.MobileNo || '',
-      UserID: this.useDetails?.UserID,
+      UserID: this.useDetails?.Id,
       ProfilePicName: this.useDetails?.ProfilePicName,
       CoverPicName: this.useDetails?.CoverPicName,
     };
@@ -84,7 +84,7 @@ export class EditProfileComponent implements OnInit, AfterViewInit {
   saveChanges(): void {
     this.spinner.show();
     if (this.userForm?.value) {
-      const profileId = this.useDetails.Id;
+      const profileId = this.useDetails.profileId;
       const apiUrl = `${this.apiUrl}profile/${profileId}`;
       this.commonService.update(apiUrl, this.userForm.value).subscribe({
         next: (res: any) => {

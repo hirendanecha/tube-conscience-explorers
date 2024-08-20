@@ -7,11 +7,11 @@
       <h2 class="text-center">No search result found</h2>
     </ng-container>
     <ng-container *ngIf="channelData?.firstname && !searchResults">
-      <div class="main-title d-flex font-24-px icon-color">
+      <div class="main-title d-flex font-24-px icon-color col-md-2 align-items-center">
         <fa-icon [icon]="['fas', 'play-circle']" class="me-2" />
-        <h6>{{ channelData.firstname }}</h6>
+        <h6>{{ channelData?.firstname }}</h6>
       </div>
-      <app-video-card [videoData]="videoList" />
+      <app-video-card [videoData]="videoList" />  
       <div
         class="align-items-center justify-content-center mb-2 row"
         *ngIf="!hasMoreData && videoList.length"
@@ -23,7 +23,7 @@
           <img
             loading="lazy"
             [src]="advertisementDataList?.[0]?.imageUrl"
-            class="advertise-image h-100 w-100 rounded-2"
+            class="advertise-image image-render h-100 w-100 rounded-2"
             alt=""
           />
         </a>
@@ -33,7 +33,7 @@
           <img
             loading="lazy"
             [src]="advertisementDataList?.[2]?.imageUrl"
-            class="advertise-image h-100 w-100 rounded-2"
+            class="advertise-image image-render h-100 w-100 rounded-2"
             alt=""
           />
         </a>
@@ -52,7 +52,7 @@
             <img
               loading="lazy"
               [src]="advertisementDataList[1]?.imageUrl"
-              class="advertise-image h-100 w-100 rounded-2"
+              class="advertise-image image-render h-100 w-100 rounded-2"
               alt=""
             />
           </a>
@@ -62,7 +62,7 @@
             <img
               loading="lazy"
               [src]="advertisementDataList[3]?.imageUrl"
-              class="advertise-image h-100 w-100 rounded-2"
+              class="advertise-image image-render h-100 w-100 rounded-2"
               alt=""
             />
           </a>
@@ -71,12 +71,12 @@
       </div>
       </div>
     </ng-container>
-</div>
+  </div>
 </div>
 <ng-container *ngIf="!searchResults">
   <div class="video-block section-padding">
-    <div class="row">
-      <div class="col-md-12">
+    <div class="row align-items-center">
+      <div class="col-md-2">
         <div class="main-title d-flex font-24-px icon-color">
           <fa-icon [icon]="['fas', 'play-circle']" class="me-2" />
           <h6>Featured Videos</h6>
